@@ -20,6 +20,7 @@ public class UserController {
 
     @PostMapping("/user") // {POST /user
     public void saveUser(@RequestBody UserCreateRequest request){
+
         userService.saveUser(request);
     }
 
@@ -30,11 +31,13 @@ public class UserController {
 
     @PutMapping("/user")
     public void updateUser(@RequestBody UserUpdateRequest request){
+
         userService.updateUser(request);
     }
 
     @DeleteMapping("/user")
     public void deleteUser(@RequestParam String name){
+
         userService.deleteUser(name);
     }
 

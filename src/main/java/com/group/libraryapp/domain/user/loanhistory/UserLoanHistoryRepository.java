@@ -6,8 +6,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
 public interface UserLoanHistoryRepository extends JpaRepository<UserLoanHistory, Long> {
-
-    Optional<Book> findByName(String name);
     boolean existByBookNameAndIsReturn(String name, boolean isReturn);
 
 }
